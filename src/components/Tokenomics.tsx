@@ -226,11 +226,11 @@ export function Tokenomics() {
                     <div className="text-3xl text-pink-400">$0.015</div>
                     <div className="text-sm text-gray-400 mt-2">per $PC token</div>
                   </div>
-                  <div className="bg-slate-900/50 rounded-lg p-6 border border-green-500/30">
+                  {/* <div className="bg-slate-900/50 rounded-lg p-6 border border-green-500/30">
                     <div className="text-sm text-gray-400 mb-2">Early Investor Advantage</div>
                     <div className="text-3xl text-green-400">~107%</div>
                     <div className="text-sm text-gray-400 mt-2">potential gain at launch</div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </Card>
