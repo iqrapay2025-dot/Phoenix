@@ -75,7 +75,7 @@ export function Hero() {
                 className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-6 text-lg opacity-75 cursor-not-allowed"
               >
                 <Rocket className="w-5 h-5 mr-2" />
-                Join on Pinksale
+                Join the Presale
               </Button>
             </div>
             <div className="flex gap-3">
