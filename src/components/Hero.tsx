@@ -112,7 +112,7 @@ export function Hero() {
             </div>
              <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
               <div className="text-3xl md:text-4xl text-green-400 mb-2">Early supporters benefit from lower entry</div>
-              <div className="text-gray-400">Potential Gain</div>
+              {/* <div className="text-gray-400">Potential Gain</div> */}
             </div>
           </div>
         </div>
