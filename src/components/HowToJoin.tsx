@@ -14,7 +14,7 @@ export function HowToJoin() {
       icon: ShoppingCart,
       number: "2",
       title: "Join the Presale on Pinksale",
-      description: "Starting (coming soon), visit the official Pinksale link to participate in the private sale at $0.005 per $PC.",
+      description: "Starting (coming soon), visit the official Pinksale link to participate in the presale at $0.00765 per $PC.",
       color: "from-pink-500 to-pink-600"
     },
     {
