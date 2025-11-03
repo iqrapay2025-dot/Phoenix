@@ -58,9 +58,11 @@ export function Hero() {
           >
             Community
           </a>
-          <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
-            Join Fairlunch
-          </Button>
+          <a href="https://www.pinksale.finance/launchpad/ethereum/0xCcC1EcEB0F97cdC8f921022c9769847B5aA11f0a">
+            <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700">
+              Join Fairlunch
+            </Button>
+          </a>
         </div>
       </nav>
 
