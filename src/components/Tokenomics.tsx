@@ -56,7 +56,7 @@ export function Tokenomics() {
     },
     {
       allocation: "Ecosystem Development",
-      tokens: "13,800,000",
+      tokens: "23 800 000",
       percentage: 2,
       color: "#e879f9",
     },
@@ -245,11 +245,11 @@ export function Tokenomics() {
           </Card>
         </div>
 
-        {/* Presale Structure */}
+        {/* Fairlunch Structure */}
         <div className="mt-20 max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl text-white mb-4">
-              Presale Structure
+              Fairlunch Structure
             </h3>
             <p className="text-xl text-gray-400">
               Early access opportunity for supporters who share our long-term
@@ -298,7 +298,7 @@ export function Tokenomics() {
                 <div className="space-y-6">
                   <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 border border-purple-500/30">
                     <div className="text-sm text-gray-400 mb-2">
-                      Presale Price
+                      Fairlunch Price
                     </div>
                     <div className="text-3xl text-purple-400">$0.00725</div>
                     <div className="text-sm text-gray-400 mt-2">
@@ -327,7 +327,7 @@ export function Tokenomics() {
           {/* Important Note */}
           <Card className="bg-slate-800/50 border-slate-700 p-6 mt-8">
             <p className="text-gray-300 text-center">
-              The presale will remain open until the hard cap is reached or
+              The Fairlunch will remain open until the hard cap is reached or
               until the official end date. Upon successful completion, tokens
               will be distributed to participants according to the vesting
               schedule.

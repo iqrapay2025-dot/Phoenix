@@ -7,21 +7,21 @@ export function HowToJoin() {
       icon: Wallet,
       number: "1",
       title: "Prepare Your Wallet",
-      description: "Install a self-custody wallet like MetaMask, Rabby, or Trust Wallet and fund it with Ethereum (ETH). You'll need ETH to join the $PC presale on Pinksale.",
+      description: "Install a self-custody wallet like MetaMask, Rabby, or Trust Wallet and fund it with Ethereum (ETH). You'll need ETH to join the $PC Fairlunch on Pinksale.",
       color: "from-purple-500 to-purple-600"
     },
     {
       icon: ShoppingCart,
       number: "2",
-      title: "Join the Presale on Pinksale",
-      description: "Starting (coming soon), visit the official Pinksale link to participate in the presale at $0.00765 per $PC.",
+      title: "Join the Fairlunch on Pinksale",
+      description: "Starting (NOW!), visit the official Pinksale link to participate in the Fairlunch at $0.00765 per $PC.",
       color: "from-pink-500 to-pink-600"
     },
     {
       icon: CheckCircle2,
       number: "3",
       title: "Confirm & Hold",
-      description: "Approve the transaction in your wallet. Your presale $PC tokens will be reserved and claimable after the listing.",
+      description: "Approve the transaction in your wallet. Your Fairlunch $PC tokens will be reserved and claimable after the listing.",
       color: "from-purple-600 to-pink-600"
     }
   ];
@@ -31,10 +31,10 @@ export function HowToJoin() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-white mb-4">
-            How to Join the $PC Presale
+            How to Join the $PC Fairlunch
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Follow these simple steps to participate in the presale and secure your $PC tokens
+            Follow these simple steps to participate in the Fairlunch and secure your $PC tokens
           </p>
         </div>
 
@@ -77,7 +77,7 @@ export function HowToJoin() {
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 rounded-lg px-6 py-3">
             <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-            <span className="text-purple-300">Presale launching soon on Pinksale</span>
+            <span className="text-purple-300">Fairlunch launching soon on Pinksale</span>
           </div>
         </div>
       </div>
