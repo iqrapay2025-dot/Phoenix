@@ -26,7 +26,7 @@ export function Tokenomics() {
     },
     {
       allocation: "Liquidity Pool",
-      tokens: "172,500,000",
+      tokens: "127,822,500",
       percentage: 25,
       color: "#ec4899",
     },
@@ -257,7 +257,7 @@ export function Tokenomics() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="gap-8 justify-center justify-items-center">
             {/* Sale Parameters */}
             <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 overflow-hidden">
               <div className="p-8">
@@ -292,7 +292,7 @@ export function Tokenomics() {
             </Card>
 
             {/* Pricing Info */}
-            <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 overflow-hidden">
+            {/* <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 overflow-hidden">
               <div className="p-8">
                 <h4 className="text-2xl text-white mb-6">Price Overview</h4>
                 <div className="space-y-6">
@@ -314,14 +314,14 @@ export function Tokenomics() {
                       per $PC token
                     </div>
                   </div>
-                  {/* <div className="bg-slate-900/50 rounded-lg p-6 border border-green-500/30">
+                   <div className="bg-slate-900/50 rounded-lg p-6 border border-green-500/30">
                     <div className="text-sm text-gray-400 mb-2">Early Investor Advantage</div>
                     <div className="text-3xl text-green-400">Early supporters benefit from lower entry</div>
                     <div className="text-sm text-gray-400 mt-2">potential gain at launch</div>
-                  </div> */}
+                  </div> 
                 </div>
               </div>
-            </Card>
+            </Card> */}
           </div>
 
           {/* Important Note */}

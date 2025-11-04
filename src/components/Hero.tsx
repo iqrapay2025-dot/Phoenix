@@ -81,7 +81,7 @@ export function Hero() {
           </h1>
 
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
-            Get in early at $0.00725 per token. Launch price $0.015 - Don't miss
+            Get in early! - Don't miss
             your chance to be part of the future.
           </p>
 
@@ -120,19 +120,19 @@ export function Hero() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto justify-center justify-items-center">
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
               <div className="text-3xl md:text-4xl text-purple-400 mb-2">
-                $0.00725
+                Fairlunch in Progress
               </div>
-              <div className="text-gray-400">Fairlunch Price</div>
+              <div className="text-gray-400">Price determined by total raised</div>
             </div>
-            <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
+            {/* <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
               <div className="text-3xl md:text-4xl text-pink-400 mb-2">
                 $0.015
               </div>
               <div className="text-gray-400">Launch Price</div>
-            </div>
+            </div> */}
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
               <div className="text-3xl md:text-4xl text-green-400 mb-2">
                 Early supporters benefit from lower entry

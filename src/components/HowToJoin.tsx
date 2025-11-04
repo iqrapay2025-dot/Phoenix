@@ -14,7 +14,7 @@ export function HowToJoin() {
       icon: ShoppingCart,
       number: "2",
       title: "Join the Fairlunch on Pinksale",
-      description: "Starting (NOW!), visit the official Pinksale link to participate in the Fairlunch at $0.00765 per $PC.",
+      description: "Starting (NOW!), visit the official Pinksale link to participate in the Fairlunch",
       color: "from-pink-500 to-pink-600"
     },
     {
