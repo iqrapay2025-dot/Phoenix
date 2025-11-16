@@ -48,7 +48,7 @@ export function HomePage() {
           <div className="inline-flex items-center gap-2 bg-purple-500/20 border border-purple-500/30 rounded-full px-4 py-2 mb-6">
             <TrendingUp className="w-4 h-4 text-purple-400" />
             <span className="text-purple-300 text-sm">
-              Presale is LIVE 🔥
+              Presale on Countdown ⏰
             </span>
           </div>
 
@@ -96,12 +96,12 @@ export function HomePage() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <div className="relative">
-              <a href="https://www.pinksale.finance/launchpad/ethereum/0xCcC1EcEB0F97cdC8f921022c9769847B5aA11f0a">
+              {/* <a href="https://www.pinksale.finance/launchpad/ethereum/0xCcC1EcEB0F97cdC8f921022c9769847B5aA11f0a">
                 <Button className="bg-gradient-to-r from-purple-600 to-pink-600 hover:from-purple-700 hover:to-pink-700 px-8 py-6 text-lg opacity-75 cursor-pointer">
                   <Rocket className="w-5 h-5 mr-2" />
                   Join the Presale
                 </Button>
-              </a>
+              </a> */}
             </div>
             <div className="flex gap-3">
               <a
