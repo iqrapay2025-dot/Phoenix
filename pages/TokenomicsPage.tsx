@@ -5,18 +5,17 @@ import {
   TableHead,
   TableHeader,
   TableRow,
-} from "./ui/table";
-import { Card } from "./ui/card";
+} from "../src/components/ui/table";
+import { Card } from "../src/components/ui/card";
 import {
   PieChart,
   Pie,
   Cell,
   ResponsiveContainer,
-  Legend,
   Tooltip,
 } from "recharts";
 
-export function Tokenomics() {
+export function TokenomicsPage() {
   const tokenomicsData = [
     {
       allocation: "Public Sale",
@@ -41,6 +40,7 @@ export function Tokenomics() {
       tokens: "48,300,000",
       percentage: 7,
       color: "#d946ef",
+      note: "(Renounced)",
     },
     {
       allocation: "Marketing",
@@ -56,7 +56,7 @@ export function Tokenomics() {
     },
     {
       allocation: "Ecosystem Development",
-      tokens: "23 800 000",
+      tokens: "23,800,000",
       percentage: 2,
       color: "#e879f9",
     },
@@ -75,10 +75,8 @@ export function Tokenomics() {
     color: item.color,
   }));
 
-  const COLORS = tokenomicsData.map((item) => item.color);
-
   return (
-    <section id="tokenomics" className="py-20 md:py-32 relative">
+    <div className="py-20 md:py-32">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl text-white mb-4">Tokenomics</h2>
@@ -86,19 +84,52 @@ export function Tokenomics() {
             Fair distribution with deflationary mechanics. Built on Ethereum for
             security and DeFi compatibility.
           </p>
-          <div className="mt-6 flex flex-wrap justify-center gap-4 text-sm">
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2">
-              <span className="text-gray-400">Network:</span>{" "}
-              <span className="text-purple-400">Ethereum (ETH)</span>
-            </div>
-            <div className="bg-slate-800/50 border border-slate-700 rounded-lg px-4 py-2">
-              <span className="text-gray-400">Ticker:</span>{" "}
-              <span className="text-purple-400">$PC</span>
-            </div>
-          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+        {/* Token Overview */}
+        <div className="max-w-4xl mx-auto mb-16">
+          <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 overflow-hidden">
+            <div className="p-8">
+              <h3 className="text-2xl text-white mb-6">Token Overview</h3>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-4">
+                  <div className="flex justify-between py-2 border-b border-slate-700">
+                    <span className="text-gray-400">Token Name</span>
+                    <span className="text-white">Phoenix Chicken</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-slate-700">
+                    <span className="text-gray-400">Token Symbol</span>
+                    <span className="text-white">PC</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-slate-700">
+                    <span className="text-gray-400">Total Supply</span>
+                    <span className="text-white">690,000,000 PC</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="text-gray-400">Blockchain</span>
+                    <span className="text-white">Ethereum (ERC-20)</span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <div className="flex justify-between py-2 border-b border-slate-700">
+                    <span className="text-gray-400">Decimals</span>
+                    <span className="text-white">18</span>
+                  </div>
+                  <div className="flex justify-between py-2 border-b border-slate-700">
+                    <span className="text-gray-400">Initial Price</span>
+                    <span className="text-white">TBD after the fairlaunch</span>
+                  </div>
+                  <div className="flex justify-between py-2">
+                    <span className="text-gray-400">Smart Contract</span>
+                    <span className="text-green-400">Audited & Verified</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Card>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto items-center mb-16">
           {/* Chart */}
           <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 p-8">
             <h3 className="text-2xl text-white mb-8 text-center">
@@ -144,9 +175,7 @@ export function Tokenomics() {
               <Table>
                 <TableHeader>
                   <TableRow className="border-slate-700 hover:bg-slate-700/50">
-                    <TableHead className="text-purple-400">
-                      Allocation
-                    </TableHead>
+                    <TableHead className="text-purple-400">Allocation</TableHead>
                     <TableHead className="text-purple-400">Tokens</TableHead>
                     <TableHead className="text-purple-400 text-right">
                       Percentage
@@ -166,6 +195,11 @@ export function Tokenomics() {
                             style={{ backgroundColor: row.color }}
                           ></div>
                           {row.allocation}
+                          {row.note && (
+                            <span className="text-xs text-gray-400">
+                              {row.note}
+                            </span>
+                          )}
                         </div>
                       </TableCell>
                       <TableCell className="text-gray-300">
@@ -185,7 +219,7 @@ export function Tokenomics() {
         </div>
 
         {/* Key Mechanics */}
-        <div className="mt-16 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto mb-16">
           <h3 className="text-3xl text-white text-center mb-10">
             Key Mechanics
           </h3>
@@ -236,106 +270,8 @@ export function Tokenomics() {
           </div>
         </div>
 
-        {/* Total Supply */}
-        <div className="mt-12 text-center">
-          <Card className="bg-gradient-to-r from-purple-900/30 to-pink-900/30 border-purple-500/30 p-8 max-w-md mx-auto">
-            <div className="text-gray-400 mb-2">Total Supply</div>
-            <div className="text-4xl md:text-5xl text-white">690,000,000</div>
-            <div className="text-purple-400 mt-2">$PC Tokens</div>
-          </Card>
-        </div>
-
-        {/* Presale Structure */}
-        <div className="mt-20 max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h3 className="text-3xl md:text-4xl text-white mb-4">
-              Presale Structure
-            </h3>
-            <p className="text-xl text-gray-400">
-              Early access opportunity for supporters who share our long-term
-              vision
-            </p>
-          </div>
-
-          <div className="gap-8 justify-center justify-items-center">
-            {/* Sale Parameters */}
-            <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 overflow-hidden">
-              <div className="p-8">
-                <h4 className="text-2xl text-white mb-6">Sale Parameters</h4>
-                <div className="space-y-4">
-                  <div className="flex justify-between items-center py-3 border-b border-slate-700">
-                    <span className="text-gray-400">Soft Cap</span>
-                    <span className="text-white">$250,000 USD</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-slate-700">
-                    <span className="text-gray-400">Hard Cap</span>
-                    <span className="text-white">$1,500,000 USD</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-slate-700">
-                    <span className="text-gray-400">Token Price</span>
-                    <span className="text-purple-400">$0.00725 per PC</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-slate-700">
-                    <span className="text-gray-400">Minimum Buy</span>
-                    <span className="text-white">0.05 ETH</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3 border-b border-slate-700">
-                    <span className="text-gray-400">Maximum Buy</span>
-                    <span className="text-white">5 ETH</span>
-                  </div>
-                  <div className="flex justify-between items-center py-3">
-                    <span className="text-gray-400">Accepted Currencies</span>
-                    <span className="text-white">ETH, USDT, USDC</span>
-                  </div>
-                </div>
-              </div>
-            </Card>
-
-            {/* Pricing Info */}
-            <Card className="bg-slate-800/50 backdrop-blur-sm border-slate-700 overflow-hidden">
-              <div className="p-8">
-                <h4 className="text-2xl text-white mb-6">Price Overview</h4>
-                <div className="space-y-6">
-                  <div className="bg-gradient-to-r from-purple-900/50 to-pink-900/50 rounded-lg p-6 border border-purple-500/30">
-                    <div className="text-sm text-gray-400 mb-2">
-                      Presale Price
-                    </div>
-                    <div className="text-3xl text-purple-400">$0.00725</div>
-                    <div className="text-sm text-gray-400 mt-2">
-                      per $PC token
-                    </div>
-                  </div>
-                  <div className="bg-gradient-to-r from-pink-900/50 to-purple-900/50 rounded-lg p-6 border border-pink-500/30">
-                    <div className="text-sm text-gray-400 mb-2">
-                      Launch Price
-                    </div>
-                    <div className="text-3xl text-pink-400">$0.015</div>
-                    <div className="text-sm text-gray-400 mt-2">
-                      per $PC token
-                    </div>
-                  </div>
-                   <div className="bg-slate-900/50 rounded-lg p-6 border border-green-500/30">
-                    <div className="text-sm text-gray-400 mb-2">Early Investor Advantage</div>
-                    <div className="text-3xl text-green-400">Early supporters benefit from lower entry</div>
-                    <div className="text-sm text-gray-400 mt-2">potential gain at launch</div>
-                  </div> 
-                </div>
-              </div>
-            </Card>
-          </div>
-
-          {/* Important Note */}
-          <Card className="bg-slate-800/50 border-slate-700 p-6 mt-8">
-            <p className="text-gray-300 text-center">
-              The Presale will remain open until the hard cap is reached or
-              until the official end date. Upon successful completion, tokens
-              will be distributed to participants according to the vesting
-              schedule.
-            </p>
-          </Card>
-        </div>
         {/* Marketing Breakdown */}
-        <div className="mt-20 max-w-4xl mx-auto">
+        <div className="max-w-4xl mx-auto mb-16">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl text-white mb-4">
               Marketing Allocation
@@ -401,7 +337,7 @@ export function Tokenomics() {
         </div>
 
         {/* Trust Badges */}
-        <div className="mt-20 max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="text-center mb-12">
             <h3 className="text-3xl md:text-4xl text-white mb-4">
               Security & Trust
@@ -455,6 +391,6 @@ export function Tokenomics() {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 }
