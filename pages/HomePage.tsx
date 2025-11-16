@@ -4,9 +4,42 @@ import { HowToJoin } from "../src/components/HowToJoin";
 import { Community } from "../src/components/Community";
 import { ImageWithFallback } from "../src/components/figma/ImageWithFallback";
 import { Button } from "../src/components/ui/button";
-import { Rocket, TrendingUp, Send, Twitter } from "lucide-react";
+import { Rocket, TrendingUp, Send, Twitter, Clock } from "lucide-react";
+import { useState, useEffect } from "react";
 
 export function HomePage() {
+  const [timeLeft, setTimeLeft] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
+
+  useEffect(() => {
+    const targetDate = new Date("December 1, 2025 00:00:00 UTC").getTime();
+
+    const updateCountdown = () => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      if (distance > 0) {
+        setTimeLeft({
+          days: Math.floor(distance / (1000 * 60 * 60 * 24)),
+          hours: Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)),
+          minutes: Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60)),
+          seconds: Math.floor((distance % (1000 * 60)) / 1000),
+        });
+      } else {
+        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+      }
+    };
+
+    updateCountdown();
+    const interval = setInterval(updateCountdown, 1000);
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <div>
       {/* Hero Content */}
@@ -26,6 +59,40 @@ export function HomePage() {
           <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-2xl mx-auto">
             Get in early! - Don't miss your chance to be part of the future.
           </p>
+
+          {/* Countdown Timer */}
+          <div className="mb-8">
+            <div className="flex items-center justify-center gap-2 mb-4">
+              <Clock className="w-5 h-5 text-purple-400" />
+              <span className="text-gray-300">Presale Starts In</span>
+            </div>
+            <div className="grid grid-cols-4 gap-3 max-w-2xl mx-auto">
+              <div className="bg-gradient-to-br from-purple-900/50 to-slate-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-4">
+                <div className="text-3xl md:text-5xl text-purple-400 mb-1">
+                  {timeLeft.days}
+                </div>
+                <div className="text-xs md:text-sm text-gray-400">DAYS</div>
+              </div>
+              <div className="bg-gradient-to-br from-pink-900/50 to-slate-800/50 backdrop-blur-sm border border-pink-500/30 rounded-xl p-4">
+                <div className="text-3xl md:text-5xl text-pink-400 mb-1">
+                  {timeLeft.hours}
+                </div>
+                <div className="text-xs md:text-sm text-gray-400">HOURS</div>
+              </div>
+              <div className="bg-gradient-to-br from-purple-900/50 to-slate-800/50 backdrop-blur-sm border border-purple-500/30 rounded-xl p-4">
+                <div className="text-3xl md:text-5xl text-purple-400 mb-1">
+                  {timeLeft.minutes}
+                </div>
+                <div className="text-xs md:text-sm text-gray-400">MINUTES</div>
+              </div>
+              <div className="bg-gradient-to-br from-pink-900/50 to-slate-800/50 backdrop-blur-sm border border-pink-500/30 rounded-xl p-4">
+                <div className="text-3xl md:text-5xl text-pink-400 mb-1">
+                  {timeLeft.seconds}
+                </div>
+                <div className="text-xs md:text-sm text-gray-400">SECONDS</div>
+              </div>
+            </div>
+          </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
             <div className="relative">
