@@ -7,14 +7,14 @@ export function HowToJoin() {
       icon: Wallet,
       number: "1",
       title: "Prepare Your Wallet",
-      description: "Install a self-custody wallet like MetaMask, Rabby, or Trust Wallet and fund it with Ethereum (ETH). You'll need ETH to join the $PC Presale on Pinksale.",
+      description: "Install a self-custody wallet like MetaMask, Rabby, or Trust Wallet and fund it with Ethereum (ETH). You'll need ETH to join the $PC Presale.",
       color: "from-purple-500 to-purple-600"
     },
     {
       icon: ShoppingCart,
       number: "2",
-      title: "Join the Presale on Pinksale",
-      description: "Starting (NOW!), visit the official Pinksale link to participate in the Presale",
+      title: "Join the Presale",
+      description: "Starting (NOW!), visit the official link to participate in the Presale",
       color: "from-pink-500 to-pink-600"
     },
     {
@@ -77,7 +77,7 @@ export function HowToJoin() {
         <div className="text-center mt-12">
           <div className="inline-flex items-center gap-2 bg-purple-500/10 border border-purple-500/30 rounded-lg px-6 py-3">
             <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-            <span className="text-purple-300">Presale launching soon on Pinksale</span>
+            <span className="text-purple-300">Presale launching soon</span>
           </div>
         </div>
       </div>

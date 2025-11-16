@@ -126,7 +126,7 @@ export function HomePage() {
           </div>
 
           {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto justify-center justify-items-center">
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-3xl mx-auto justify-center justify-items-center">
             <div className="bg-slate-800/50 backdrop-blur-sm border border-slate-700 rounded-xl p-6">
               <div className="text-3xl md:text-4xl text-purple-400 mb-2">
                 Presale in Progress
@@ -140,7 +140,7 @@ export function HomePage() {
                 Early supporters benefit from lower entry
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

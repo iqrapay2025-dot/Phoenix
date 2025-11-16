@@ -2050,7 +2050,7 @@
 
   @media (width >= 48rem) {
     .md\:py-32 {
-      padding-block: calc(var(--spacing) * 32);
+      padding-block: calc(var(--spacing) * 15);
     }
   }
 
