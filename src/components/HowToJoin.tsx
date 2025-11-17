@@ -7,23 +7,26 @@ export function HowToJoin() {
       icon: Wallet,
       number: "1",
       title: "Prepare Your Wallet",
-      description: "Install a self-custody wallet like MetaMask, Rabby, or Trust Wallet and fund it with Ethereum (ETH). You'll need ETH to join the $PC Presale.",
-      color: "from-purple-500 to-purple-600"
+      description:
+        "Install a self-custody wallet like MetaMask, Rabby, or Trust Wallet and fund it with Ethereum (ETH). You'll need ETH to join the $PC Presale.",
+      color: "from-purple-500 to-purple-600",
     },
     {
       icon: ShoppingCart,
       number: "2",
       title: "Join the Presale",
-      description: "Starting (NOW!), visit the official link to participate in the Presale",
-      color: "from-pink-500 to-pink-600"
+      description:
+        "Starting (NOW!), visit the official link to participate in the Presale",
+      color: "from-pink-500 to-pink-600",
     },
     {
       icon: CheckCircle2,
       number: "3",
       title: "Confirm & Hold",
-      description: "Approve the transaction in your wallet. Your Presale $PC tokens will be reserved and claimable after the listing.",
-      color: "from-purple-600 to-pink-600"
-    }
+      description:
+        "Approve the transaction in your wallet. Your Presale $PC tokens will be reserved and claimable after the listing.",
+      color: "from-purple-600 to-pink-600",
+    },
   ];
 
   return (
@@ -34,7 +37,8 @@ export function HowToJoin() {
             How to Join the $PC Presale
           </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Follow these simple steps to participate in the Presale and secure your $PC tokens
+            Follow these simple steps to participate in the Presale and secure
+            your $PC tokens
           </p>
         </div>
 
@@ -42,7 +46,7 @@ export function HowToJoin() {
           {steps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <Card 
+              <Card
                 key={index}
                 className="bg-slate-800/50 backdrop-blur-sm border-slate-700 p-8 relative overflow-hidden group hover:border-purple-500/50 transition-all duration-300"
               >
@@ -52,18 +56,20 @@ export function HowToJoin() {
                 </div>
 
                 {/* Icon */}
-                <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                <div
+                  className={`w-16 h-16 rounded-xl bg-gradient-to-br ${step.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}
+                >
                   <Icon className="w-8 h-8 text-white" />
                 </div>
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <div className={`inline-block text-sm mb-2 bg-gradient-to-r ${step.color} bg-clip-text text-transparent`}>
+                  <div
+                    className={`inline-block text-sm mb-2 bg-gradient-to-r ${step.color} bg-clip-text text-transparent`}
+                  >
                     Step {step.number}
                   </div>
-                  <h3 className="text-2xl text-white mb-4">
-                    {step.title}
-                  </h3>
+                  <h3 className="text-2xl text-white mb-4">{step.title}</h3>
                   <p className="text-gray-400 leading-relaxed">
                     {step.description}
                   </p>

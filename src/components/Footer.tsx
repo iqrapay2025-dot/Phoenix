@@ -1,4 +1,4 @@
-import { Twitter, Send, MessageCircle } from "lucide-react";
+import { Twitter, Send, MessageCircle, Mail } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logo from "figma:asset/56317b1deb8f793ff58dbb977a646fb6a99e7db4.png";
 
@@ -77,6 +77,13 @@ export function Footer() {
                 className="w-10 h-10 bg-slate-800 hover:bg-purple-600 rounded-lg flex items-center justify-center transition-colors"
               >
                 <Send className="w-5 h-5 text-gray-300" />
+              </a>
+              <a
+                href="mailto:phoenixc@atomicmail.io"
+                className="w-10 h-10 bg-slate-800 hover:bg-purple-600 rounded-lg flex items-center justify-center transition-colors"
+                aria-label="Email phoenixc@atomicmail.io"
+              >
+                <Mail className="w-5 h-5 text-gray-300" />
               </a>
             </div>
             <p className="text-gray-500 text-sm mt-4">#PhoenixChickenArmy</p>
