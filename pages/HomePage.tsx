@@ -16,12 +16,12 @@ export function HomePage() {
   });
 
   useEffect(() => {
-    const targetDate = new Date("December 1, 2025 00:00:00 UTC").getTime();
-
+     const targetDate = new Date("December 15, 2025 00:00:00 UTC").getTime();
+ 
     const updateCountdown = () => {
       const now = new Date().getTime();
       const distance = targetDate - now;
-
+ 
       if (distance > 0) {
         setTimeLeft({
           days: Math.floor(distance / (1000 * 60 * 60 * 24)),
@@ -33,10 +33,10 @@ export function HomePage() {
         setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     };
-
+ 
     updateCountdown();
     const interval = setInterval(updateCountdown, 1000);
-
+ 
     return () => clearInterval(interval);
   }, []);
 

@@ -2,7 +2,16 @@ import { Twitter, Send, MessageCircle, Mail } from "lucide-react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import logo from "figma:asset/56317b1deb8f793ff58dbb977a646fb6a99e7db4.png";
 
-export function Footer() {
+interface FooterProps {
+  onNavigate: (page: string) => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
+  const handleNavClick = (page: string) => {
+    onNavigate(page);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <footer className="border-t border-slate-800 py-12 relative">
       <div className="container mx-auto px-4">
@@ -31,29 +40,44 @@ export function Footer() {
             <h4 className="text-white mb-4">Quick Links</h4>
             <ul className="space-y-2">
               <li>
-                <a href="#about" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  About
-                </a>
+                <button
+                  onClick={() => handleNavClick("home")}
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Home
+                </button>
               </li>
               <li>
-                <a href="#how-to-join" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  How to Join
-                </a>
-              </li>
-              <li>
-                <a href="#tokenomics" className="text-gray-400 hover:text-purple-400 transition-colors">
+                <button
+                  onClick={() => handleNavClick("tokenomics")}
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
                   Tokenomics
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#roadmap" className="text-gray-400 hover:text-purple-400 transition-colors">
+                <button
+                  onClick={() => handleNavClick("roadmap")}
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
                   Roadmap
-                </a>
+                </button>
               </li>
               <li>
-                <a href="#community" className="text-gray-400 hover:text-purple-400 transition-colors">
-                  Community
-                </a>
+                <button
+                  onClick={() => handleNavClick("ecosystem")}
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Ecosystem
+                </button>
+              </li>
+              <li>
+                <button
+                  onClick={() => handleNavClick("staking")}
+                  className="text-gray-400 hover:text-purple-400 transition-colors"
+                >
+                  Staking
+                </button>
               </li>
             </ul>
           </div>
@@ -97,12 +121,18 @@ export function Footer() {
               © 2025 Phoenix Chicken ($PC). All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              <button
+                onClick={() => handleNavClick("terms")}
+                className="text-gray-400 hover:text-purple-400 transition-colors"
+              >
                 Terms of Service
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors">
+              </button>
+              <button
+                onClick={() => handleNavClick("privacy")}
+                className="text-gray-400 hover:text-purple-400 transition-colors"
+              >
                 Privacy Policy
-              </a>
+              </button>
             </div>
           </div>
           <div className="text-center">

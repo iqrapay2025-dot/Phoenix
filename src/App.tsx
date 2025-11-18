@@ -8,6 +8,8 @@ import { TokenomicsPage } from "../pages/TokenomicsPage";
 import { RoadmapPage } from "../pages/RoadmapPage";
 import { EcosystemPage } from "../pages/EcosystemPage";
 import { StakingPage } from "../pages/StakingPage";
+import { PrivacyPolicyPage } from "../pages/PrivacyPolicyPage";
+import { TermsOfServicePage } from "../pages/TermsofServicePage";
 import { useState, useEffect } from "react";
 import { AnimatePresence } from "motion/react";
 
@@ -49,6 +51,10 @@ export default function App() {
         return <EcosystemPage />;
       case "staking":
         return <StakingPage />;
+      case "privacy":
+        return <PrivacyPolicyPage />;
+      case "terms":
+        return <TermsOfServicePage />;
       default:
         return <HomePage />;
     }
@@ -70,7 +76,7 @@ export default function App() {
       <SmoothScroll />
       
       {/* Header with Navigation */}
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden w-full">
         <Navigation currentPage={currentPage} onNavigate={handleNavigation} />
       </div>
 
@@ -78,7 +84,7 @@ export default function App() {
       <main>{renderPage()}</main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onNavigate={handleNavigation} />
     </div>
   );
 }
